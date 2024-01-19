@@ -1,0 +1,128 @@
+:root {
+    --text-color: #ffffff;
+    --bg-color: #080808;
+    --border-color: #e9b933;
+    --gradient-color1: #000000;
+    --gradient-color2: #141206;
+    --gradient: linear-gradient(150deg, var(--gradient-color2), var(--gradient-color1));
+
+    /* Animation Timers */
+    --animation-delay: 155ms;
+
+    /* Misc Variables */
+    --bg-h: 1px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: var(--bg-color);
+    background-image: var(--gradient);
+    color: var(--text-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--animation-delay);
+    margin: 0;
+    padding: 0;
+}
+a:hover {
+    color: #a0a0a0;
+}
+
+header {
+    background-color: black;
+    color: aliceblue;
+    margin: 0px;
+    border-bottom: solid 1px var(--border-color);
+    padding: 0 10px;
+}
+@media(min-width: 1080px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 5px;
+    /* max-width: 1152px; */
+}
+
+.hamburger {
+    font-size: 34px;
+    max-height: 34px;
+    margin: auto 0;
+}
+@media(min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+nav img {
+    max-height: 54px;
+}
+@media(max-width: 335px) {
+    nav img {
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.links {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    min-width: 420px;
+    /* flex-wrap: wrap; */
+}
+@media(max-width: 699px) {
+    .links {
+        display: none;
+    }
+}
+.links h1 {
+    font-weight: normal;
+    font-size: 14pt;
+}
+
+.links a {
+    color: var(--text-color);
+    text-decoration: none;
+    background: linear-gradient(to right, var(--border-color), var(--border-color)) no-repeat left bottom / 0 var(--bg-h);
+    transition: var(--animation-delay);
+    padding-bottom: 2px;
+}
+.links a#selected {
+    color: var(--text-color);
+    text-decoration: none;
+    background: linear-gradient(to right, var(--border-color), var(--border-color)) no-repeat left bottom / 0 var(--bg-h);
+    padding-bottom: 2px;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+.links a:where(:hover, :focus-visible) {
+    color: var(--text-color-1);
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.contact {
+    font-size: 34px;
+    max-height: 34px;
+    margin: auto 0;
+}
+
+img#hero {
+    margin: 50px;
+    border-radius: .3em;
+    /* max-width: 360px; */
+}
