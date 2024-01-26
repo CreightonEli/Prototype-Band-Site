@@ -14,7 +14,7 @@
 }
 
 body, html {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     background-color: var(--bg-color);
     background-image: var(--gradient);
@@ -62,7 +62,7 @@ nav {
     max-height: 34px;
     margin: auto 0;
 }
-@media(min-width: 700px) {
+@media(min-width: 811px) {
     .hamburger {
         display: none;
     }
@@ -84,7 +84,7 @@ nav img {
     min-width: 420px;
     /* flex-wrap: wrap; */
 }
-@media(max-width: 699px) {
+@media(max-width: 810px) {
     .links {
         display: none;
     }
@@ -103,7 +103,6 @@ nav img {
 }
 .links a#selected {
     color: var(--text-color);
-    text-decoration: none;
     background: linear-gradient(to right, var(--border-color), var(--border-color)) no-repeat left bottom / 0 var(--bg-h);
     padding-bottom: 2px;
     background-size: 100% var(--bg-h);
@@ -115,14 +114,94 @@ nav img {
     background-position-x: left;
 }
 
+li a {
+    color: var(--text-color);
+    text-decoration: none;
+    background: linear-gradient(to right, var(--border-color), var(--border-color)) no-repeat left bottom / 0 var(--bg-h);
+    transition: var(--animation-delay);
+    padding-bottom: 2px;
+}
+li a#selected {
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--border-color), var(--border-color)) no-repeat left bottom / 0 var(--bg-h);
+    padding-bottom: 2px;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+li a:where(:hover, :focus-visible) {
+    color: var(--text-color-1);
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
 .contact {
     font-size: 34px;
     max-height: 34px;
     margin: auto 0;
 }
+@media(max-width: 600px) {
+    nav {
+        justify-content: left;
+    }
+    .contact {
+        display: none;
+    }
+    nav #logo {
+        margin: 0 auto;
+    }
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1288px;
+}
+
+section {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
 
 img#hero {
-    margin: 50px;
+    margin: 0px 80px 0 0;
     border-radius: .3em;
-    /* max-width: 360px; */
+    max-height: 566px;
+}
+
+/* .block-container {} */
+
+li {
+    font-size: 14pt;
+    margin: 6px 0;
+}
+
+button {
+    height: 50px;
+    width: 175px;
+    font-size: 12px;
+    background-color: var(--gradient-color1);
+    color: var(--text-color);
+    border: solid 1px var(--border-color);
+    transition: var(--animation-delay);
+    margin: 500px 0 0 40px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--border-color);
+    color: var(--bg-color);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
