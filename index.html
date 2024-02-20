@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>ScholarsWord</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -32,40 +33,49 @@
                 <a href="https://open.spotify.com/artist/1bK3ZhczOq774h6aogp8tr" target="_blank"><i class="ph ph-spotify-logo"></i></a>
                 <a href="https://www.youtube.com/@ScholarsWord444" target="_blank"><i class="ph ph-youtube-logo"></i></a>
                 <a href="https://www.facebook.com/scholarsword1/" target="_blank"><i class="ph ph-facebook-logo"></i></a>
-                <a href=""><i class="ph ph-envelope"></i></a>
             </div>
         </nav>
     </header>
     <main>
-        <section>
-            <img src="images/gig.jpg" id="hero">
+        <section class="flex-container">
+            <img src="images/gig.jpg" class="img-sec-2">
             <div class="block-container">
-                <h2>NEW JAMS JUST DROPPED</h2>
+                <h2>New Jams!</h2>
                 <ol>
-                    <li><a href="https://www.youtube.com/watch?v=c2ZPT0umuS8" target="_blank">Day of the Lord</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=tQ3sUD1-zI8" target="_blank">Thank You Jah</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=TCqk5911kmE" target="_blank">Its Impossible</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=H5ygICfskgc" target="_blank">Keep Comin with Love</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=I-a_Qph7iuY" target="_blank">Jah Destiny</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=27b_I8bQWzQ" target="_blank">Low Tide Ride</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=wE9Ol0X3KNU" target="_blank">Lyrical Miracle</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=YmVlWKGvvq8" target="_blank">Don't Choose to Lose</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ZYYmTpWkNRM" target="_blank">FULL TIME</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=Xr1xC-zAbgs" target="_blank">My Morning Sunshine</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=vz8iRx90CX8" target="_blank">Doobie4Youbie</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=KV_9jjbXhqw" target="_blank">I'm Up On Top</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=KaQothqAahs" target="_blank">Enough!!!</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=AoivkSRL6wU" target="_blank">Mystic Dread</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=WW0oNCFdynQ" target="_blank">Sanalos</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=anTU65MxQFw" target="_blank">Underground</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=DwzNNVsqrDw" target="_blank">THE WORD AND HIS ARMY</a></li>
+                    <li><a class="button selected" onclick="selectButton(this)" href="https://www.youtube.com/embed/c2ZPT0umuS8?si=wVemoH6Nht-lC7UF&autoplay=1" target=player>Day of the Lord</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/tQ3sUD1-zI8?si=2GOdOPbz8DHrNHlU&autoplay=1" target=player>Thank You Jah</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/TCqk5911kmE?si=d1CC_A1fE9TFDb-k&autoplay=1" target=player>Its Impossible</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/H5ygICfskgc?si=-5hQf_sy-1jHE-ea&autoplay=1" target=player>Keep Comin with Love</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/I-a_Qph7iuY?si=aCOSg0-AkPh2hRPs&autoplay=1" target=player>Jah Destiny</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/27b_I8bQWzQ?si=gFxhXvT6qxTRnixP&autoplay=1" target=player>Low Tide Ride</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/YqtFy-Zs3qk?si=gzY4W84TZUvPAmCm&autoplay=1" target=player>Lyrical Miracle</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/YmVlWKGvvq8?si=BwhVXrjhjYVdMbrv&autoplay=1" target=player>Don't Choose to Lose</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/ZYYmTpWkNRM?si=g_XZ3mELUn5ULMNQ&autoplay=1" target=player>FULL TIME</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/OVq8Ygb02e8?si=74zSDdqyCu_zYEi-&autoplay=1" target=player>My Morning Sunshine Rx</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/fMP1Y-6Zq9I?si=LV9LFQTjUlYUnkOS&autoplay=1" target=player>Doobie4Youbie</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/P4EC9ZzUV0k?si=nMlwQuLx7CJQ5ln_&autoplay=1" target=player>I'm Up On Top</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/b7geF1e2w_Y?si=pCefn_jV53DAgUa_&autoplay=1" target=player>Enough!!!</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/AoivkSRL6wU?si=hVjEfBN1sQkaZLf0&autoplay=1" target=player>Mystic Dread</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/RoeIJC5FVUs?si=iM_piVBaYseJm0fP&autoplay=1" target=player>Sanalos Remix</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/anTU65MxQFw?si=5pg1m8crRfXXcTDk&autoplay=1" target=player>Underground</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/DwzNNVsqrDw?si=Ua7DzHx8oTKoO2Nx&autoplay=1" target=player>THE WORD AND HIS ARMY</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/lRrEA9bCMB4?si=K2nkiZcZdbiqfc9N&autoplay=1" target=player>Stand Firm in Jah Might!!!</a></li>
+                    <li><a class="button" onclick="selectButton(this)" href="https://www.youtube.com/embed/iXAe10IfIDs?si=tB5w9QSNvCWtH9fB&autoplay=1" target=player>SAILS</a></li>
                 </ol>
             </div>
-            <button>PURCHASE HIGH-QUALITY DOWNLOADS</button>
+            <div class="video-container-pop">
+                <iframe name="player" width="1288" height="725" src="https://www.youtube.com/embed/c2ZPT0umuS8?si=wVemoH6Nht-lC7UF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </section>
-        <div class="video-container">
-            <iframe width="1288" height="725" src="https://www.youtube.com/embed/ZYYmTpWkNRM?si=o8hK2GNSDTtDEcHV&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+        <hr>
+        <section class="flex-container">
+            <section class="block-container">
+                <h2 style="margin: 0 0 10px;">Listen on Spotify</h2>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1bK3ZhczOq774h6aogp8tr?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <img src="images/ScholarsWord Logo.png" class="square">
+            </section>
+            <img src="images/silhouette.jpg" class="hero">
+        </section>
     </main>
 </body>
 </html>
